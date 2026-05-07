@@ -1,0 +1,49 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:   #f5f0e8;
+  --warm:    #ede5d8;
+  --paper:   #faf7f2;
+  --ink:     #1a1612;
+  --ink2:    #3d3530;
+  --ink3:    #7a6e65;
+  --rust:    #c0533a;
+  --rust2:   #e8704f;
+  --sage:    #5a7a5e;
+  --gold:    #b8933a;
+  --border:  rgba(26,22,18,0.12);
+  --shadow:  rgba(26,22,18,0.08);
+}
+
+html, body, #root {
+  min-height: 100%;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Lato', sans-serif;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--warm); }
+::-webkit-scrollbar-thumb { background: var(--ink3); border-radius: 4px; }
+
+input[type="date"],
+input[type="time"] { color-scheme: light; }
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5; cursor: pointer;
+}
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(14px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes toastIn {
+  from { opacity:0; transform:translateX(-50%) translateY(-10px) scale(.96); }
+  to   { opacity:1; transform:translateX(-50%) translateY(0) scale(1); }
+}
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
