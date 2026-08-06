@@ -1,0 +1,3 @@
+Para ejecutar la aplicación:
+desde la terminal en la ruta: D:\JDURAN\IDE VSC\EJERCICIOS\ejercicio-tracker\ejercicio-cama
+comando: npm run dev
